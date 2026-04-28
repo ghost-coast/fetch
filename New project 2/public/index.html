@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>fetch</title>
+    <link rel="stylesheet" href="/styles.css?v=20260428-9" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="brand-stack">
+          <p class="brand-mark">fetch</p>
+          <p class="eyebrow">Wind Swell Tide</p>
+        </div>
+        <div class="masthead-content">
+          <h1 id="page-title"></h1>
+          <div class="toolbar">
+            <a class="home-link" id="home-link" href="/">All locations</a>
+            <button id="refresh" type="button" aria-label="Refresh live data" title="Refresh live data">
+              <span aria-hidden="true">&#8635;</span>
+              <span class="button-label">Refresh</span>
+            </button>
+          </div>
+          <p id="status" role="status">Loading...</p>
+        </div>
+      </section>
+
+      <section id="home-view" class="home-view" aria-label="Available buoy locations">
+        <div id="location-grid" class="location-grid"></div>
+      </section>
+
+      <section id="detail-view" class="detail-view" hidden>
+        <div class="wave-source-images" hidden aria-hidden="true">
+          <img id="buoy-image" alt="" />
+          <img id="swell-direction-image" alt="" />
+        </div>
+
+        <div class="section-heading section-label">
+          <p class="eyebrow">Wind</p>
+        </div>
+
+        <section class="wind-grid" id="wind-grid" aria-label="Wind observations"></section>
+
+        <div class="section-heading section-label">
+          <p class="eyebrow">Swell</p>
+        </div>
+
+        <section class="panel wave-stats-panel" aria-label="Sea and swell observations">
+          <div id="wave-stats"></div>
+        </section>
+
+        <div class="section-heading section-label">
+          <p class="eyebrow">Tide</p>
+        </div>
+
+        <section class="panel tide-panel" aria-label="Tide table">
+          <div id="tide-chart"></div>
+        </section>
+      </section>
+
+      <footer class="app-footer">
+        <p>Data collected from BOM and for research purposes only.</p>
+      </footer>
+    </main>
+
+    <script src="/app.js?v=20260428-7"></script>
+  </body>
+</html>
